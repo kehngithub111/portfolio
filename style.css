@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.logo {
+  font-family: "Shantell Sans", cursive;
+  font-size: 3em;
+  cursor: pointer;
+  transition: 0.5s;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.5s all ease;
+}
+
+.logo span {
+  font-weight: 900;
+  color: #107143;
+  float: left;
+}
+
+.logo::after {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 0;
+  height: 2px;
+  background-color: #107143;
+  transition: 0.5s;
+}
+
+.logo:hover::after {
+  width: 100%;
+}
+
+nav {
+  min-width: 50%;
+  position: relative;
+  transition: 0.5 all ease;
+}
+
+nav ul {
+  display: flex;
+  position: relative;
+  list-style: none;
+  justify-content: space-around;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: "Roboto Slab", serif;
+  color: grey;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  margin: auto;
+  width: 0;
+  height: 2px;
+  background-color: #107143;
+  transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  color: black;
+}
+
+.hamburger {
+  position: absolute;
+  right: 0;
+  margin-right: 50px;
+  display: none;
+  transition: 0.5s;
+}
+
+.hamburger i {
+  font-size: 30px;
+}
+
+@media (max-width: 1200px) {
+  nav ul li a {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+@media (max-width: 375px) {
+  .logo {
+    font-size: 2em;
+  }
+}
